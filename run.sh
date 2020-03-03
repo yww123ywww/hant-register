@@ -12,8 +12,8 @@ echo ">>> cd target"
 cd target
 mv app.jar $JAR
 
-echo ">>> kill -9 $(lsof -t -sTCP:LISTEN -i:$MPORT)"
-kill -9 $(lsof -t -sTCP:LISTEN -i:$MPORT)
+#echo ">>> kill -9 $(lsof -t -sTCP:LISTEN -i:$MPORT)"
+#kill -9 $(lsof -t -sTCP:LISTEN -i:$MPORT)
 
 JAVA_OPTS="-Xms512m -Xmx1536m -Dspring.profiles.active=dev"
 echo ">>> nohup java -jar $JAVA_OPTS $JAR >app.log &"
